@@ -1,5 +1,10 @@
 //header file: this is where we will declare the variables, methods within the class, library's and any other required
 // file from the project
+#include <random>
+#include <vector>
+#include <string>
+#include <chrono>
+
 class Agent
 {
 public:
@@ -19,6 +24,11 @@ private:
     double m_infection_chance = 0;
     double m_recovery_chance = 0;
     double m_dying_chance = 0;
+
+private:
+    std::vector<unsigned int>
+Discrete_distribution(std::vector<double>& weights, unsigned int
+runs);
 
 public:
     void update_location(int x_loc, int y_loc);
